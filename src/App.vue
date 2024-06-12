@@ -358,6 +358,23 @@ button{
 header{
   padding: 0 50px;
 }
+
+.display-grid-photo{
+  display: block;
+  gap: 2rem;
+}
+
+.grid-photo{
+  width: 75%;
+}
+
+.grid-text{
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+
 }
 
 </style>
