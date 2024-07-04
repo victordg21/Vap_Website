@@ -1,5 +1,17 @@
-<script setup>
-
+<script>
+  export default {
+  methods: {
+    scrollToSection() {
+      const section = document.getElementById('sales');
+      if (section) {
+        window.scrollTo({
+          top: section.offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    }
+  }
+  }
 </script>
 
 <template>
@@ -10,9 +22,11 @@
   <section class="Section1 padding-section centralize">
     <div class="container">
       <h2 class="font-bold font-size-bigger">O que você precisa para <span class="span-yellow">superar a procrastinação, a ansiedade e a inconstância </span>nos estudos para o vestibular é <span class="span-yellow">dominar os 4 princípios da Alta Performance</span></h2>
-      <h3 class="span-yellow">TE CONVIDO A ASSISTIR O VÍDEO ABAIXO, ONDE EU VOU TE MOSTRAR O VERDADEIRO MAPA DE APROVAÇÃO E TUDO QUE É NECESSÁRIO PARA VOCÊ EXTRAIR O MÁXIMO DOS SEUS ESTUDOS.</h3>
-      <iframe width="900" height="505" src="https://www.youtube.com/embed/JxvDjBeZnZw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <button class="button">Quero garantir meu acesso!</button>
+      <h3 class="span-yellow">TE CONVIDO A ASSISTIR O VÍDEO ABAIXO, ONDE EU VOU TE MOSTRAR O VERDADEIRO MAPA DA APROVAÇÃO E TUDO QUE É NECESSÁRIO PARA VOCÊ EXTRAIR O MÁXIMO DOS SEUS ESTUDOS.</h3>
+      <div class="centralize">
+        <iframe class="video-vap" src="https://www.youtube.com/embed/JxvDjBeZnZw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <button @click="scrollToSection" class="button">Quero garantir meu acesso!</button>
     </div>
   </section>
   <section class="Section2-New padding-section centralize">
@@ -21,7 +35,7 @@
         <h2 class="first-informations_text font-card_first-informations_text">Se você acha que “só estudar é suficiente”... <span class="font-bold">Veja o resultado de quem decidiu dominar os princípios e aplicar o VAP na sua preparação</span>:</h2>
         <p class="font-large second-informations_text"><span class="span-yellow font-size-bigger">+100 alunos</span> <br>Com o Método VAP</p>
       </div>
-      <div class="grid-informations">
+      <div class="grid-testimonial">
         <div class="card-white">
           <div class="card-up-information">
             <div class="card-testimonial_image"></div>
@@ -95,7 +109,7 @@
           </div>
         </div>
       </div>
-      <button class="button">Quero garantir meu acesso!</button>
+      <button @click="scrollToSection" class="button">Quero garantir meu acesso!</button>
       <div class="items-section">
         <div class="items-grid">
           <img class="grid-photo-mockup" src="./assets/Mockup 1.png" alt="">
@@ -136,12 +150,44 @@
           </div>
         </div>
         <div class="centralize">
-          <button class="button">Quero garantir meu acesso!</button>
+          <button @click="scrollToSection" class="button">Quero garantir meu acesso!</button>
         </div>
       </div>
     </div>
   </section>
-  <section class="Section3 padding-section centralize">
+  <section class="Section4-New padding-section centralize">
+    <div class="container">
+      <h2 class="font-size-bigger">Se você está em ano de vestibular, sentindo-se  <span class="span-yellow">inseguro, estagnado e improdutivo</span> ou enfrenta problemas com <span class="span-yellow"a>ansiedade e desânimo…</span></h2>
+      <p class="font-size-medium">Eu vou te entregar um ambiente de desenvolvimento para fazer seu estudo render de verdade. <span class="span-yellow">Basta você pôr em prática para:</span></p>
+      <div class="points-arrow top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#E5B30C" class="bi bi-arrow-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+        </svg>
+        <p class="points-arrow_text">Vencer a procrastinação, gerenciar o próprio tempo e conseguir estudar com constância e equilíbrio;</p>
+      </div>
+      <div class="points-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#E5B30C" class="bi bi-arrow-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+        </svg>
+        <p class="points-arrow_text">Melhorar drasticamente seu rendimento nos estudos, por meio de métodos e técnicas neurocientíficas;</p>
+      </div>
+      <div class="points-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#E5B30C" class="bi bi-arrow-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+        </svg>
+        <p class="points-arrow_text">Superar a ansiedade e a insegurança e alcançar seu ápice de produtividade, usando as emoções ao seu favor.</p>
+      </div>
+      <div class="points-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#E5B30C" class="bi bi-arrow-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+        </svg>
+        <p class="points-arrow_text">Retomar a sua confiança na aprovação e estudar com ânimo e motivação.</p>
+      </div>
+      <p class="font-size-medium top">Cada trilha no VAP propõe um caminho prático, rápido e seguro para você alcançar a verdadeira Alta Performance nos estudos e conquistar a aprovação, sem enrolação e sem conteúdos desnecessários.</p>
+      <button @click="scrollToSection" class="button">Quero garantir meu acesso ao VAP!</button>
+    </div>
+  </section>
+  <section id="sales"class="Section3 padding-section centralize">
     <div class="container">
       <h3>COMPRE AGORA COM <span class="span-red">MAIS DE 80% DE DESCONTO</span></h3>
       <h2 class="font-bold font-size-bigger-2">Aproveite o <span class="span-yellow">preço exclusivo</span> de lançamento</h2>
@@ -233,6 +279,11 @@ header{
   width: 100%;
 }
 
+.video-vap{
+  width: 800px;
+  height: 450px;
+}
+
 .centralize{
   display: flex;
   justify-content: center;
@@ -240,7 +291,7 @@ header{
   text-align: center;
 }
 
-.Section1, .Section3{
+.Section1, .Section3, .Section4-New{
   background-color: #101010;
   color: white;
 }
@@ -264,6 +315,22 @@ header{
 
 p, .align-end{
   margin: 0;
+}
+
+.points-arrow{
+  display: flex;
+  gap: 20px;
+  padding-bottom: 16px;
+}
+
+.points-arrow_text{
+  font-weight: 400;
+  font-size: 20px;
+  text-align: left;
+}
+
+.top{
+  padding-top: 60px;
 }
 
 .font-card_first-informations_text{
@@ -290,6 +357,8 @@ button{
   font-weight: 500;
   font-size: large;
   background-color: #E5B30C;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .display-grid-photo{
@@ -339,7 +408,12 @@ button{
   list-style-type: disc;
 }
 
-.grid-informations{ 
+.grid-informations{
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.grid-informations, .grid-testimonial{ 
   padding-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -365,10 +439,6 @@ button{
   background-color: white;
   border-radius: 6px;
   color: rgb(74, 67, 67);
-}
-
-.button{
-  cursor: pointer;
 }
 
 .card-name-color{
@@ -414,6 +484,11 @@ button{
 
   .container{
     width: 90%;
+  }
+
+  .video-vap{
+    width: 700px;
+    height: 400px;
   }
 }
 
