@@ -9,67 +9,96 @@
   </header>
   <section class="Section1 padding-section centralize">
     <div class="container">
-      <h3 class="span-yellow">GARANTIDO PARA VESTIBULANDOS:</h3>
-      <h2 class="font-bold font-size-bigger">Alcance a verdadeira Alta Perfomance e <span class="span-yellow">seja Aprovado!</span></h2>
-      <h4 class="font-size-medium">Domine os <span class="span-yellow">4 princípios da Alta Performance</span> nos estudos:</h4>
-      <div class="">
-        <div class="centralize font-size-medium">
-          <img class="images-section-1" src="./assets/brain.png" alt="">
-          <p class="text-first-section">Força Emocional</p>
+      <h2 class="font-bold font-size-bigger">O que você precisa para <span class="span-yellow">superar a procrastinação, a ansiedade e a inconstância </span>nos estudos para o vestibular é <span class="span-yellow">dominar os 4 princípios da Alta Performance</span></h2>
+      <h3 class="span-yellow">TE CONVIDO A ASSISTIR O VÍDEO ABAIXO, ONDE EU VOU TE MOSTRAR O VERDADEIRO MAPA DE APROVAÇÃO E TUDO QUE É NECESSÁRIO PARA VOCÊ EXTRAIR O MÁXIMO DOS SEUS ESTUDOS.</h3>
+      <iframe width="900" height="505" src="https://www.youtube.com/embed/JxvDjBeZnZw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <button class="button">Quero garantir meu acesso!</button>
+    </div>
+  </section>
+  <section class="Section2-New padding-section centralize">
+    <div class="container">
+      <div class="first-informations">
+        <h2 class="first-informations_text font-card_first-informations_text">Se você acha que “só estudar é suficiente”... <span class="font-bold">Veja o resultado de quem decidiu dominar os princípios e aplicar o VAP na sua preparação</span>:</h2>
+        <p class="font-large second-informations_text"><span class="span-yellow font-size-bigger">+100 alunos</span> <br>Com o Método VAP</p>
+      </div>
+      <div class="grid-informations">
+        <div class="card-white">
+          <div class="card-up-information">
+            <div class="card-testimonial_image"></div>
+            <h3 class="card-name-color">Davi Belo de Carvalho</h3>
+          </div>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam asperiores minus odio sunt tempora magni? Nemo tenetur natus praesentium laboriosam sed! Nam nemo quod reiciendis sed vero accusantium. Architecto, possimus.</p>
         </div>
-        <div class="centralize font-size-medium">
-          <img class="images-section-1" src="./assets/timer.png" alt="">
-          <p class="text-first-section">Produtividade e Gestão de Tempo</p>
+        <div class="card-white">
+          <div class="card-up-information">
+            <div class="card-testimonial_image"></div>
+            <h3 class="card-name-color">Davi Belo de Carvalho</h3>
+          </div>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam asperiores minus odio sunt tempora magni? Nemo tenetur natus praesentium laboriosam sed! Nam nemo quod reiciendis sed vero accusantium. Architecto, possimus.</p>
         </div>
-        <div class="centralize font-size-medium">
-          <img class="images-section-1" src="./assets/books.png" alt="">
-          <p class="text-first-section">Neurociência da Aprendizagem</p>
+        <div class="card-white">
+          <div class="card-up-information">
+            <div class="card-testimonial_image"></div>
+            <h3 class="card-name-color">Davi Belo de Carvalho</h3>
+          </div>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam asperiores minus odio sunt tempora magni? Nemo tenetur natus praesentium laboriosam sed! Nam nemo quod reiciendis sed vero accusantium. Architecto, possimus.</p>
         </div>
-        <div class="centralize font-size-medium">
-          <img class="images-section-1" src="./assets/rain.png" alt="">
-          <p class="text-first-section">Amadurecimento e Motivação</p>
+        <div class="card-white">
+          <div class="card-up-information">
+            <div class="card-testimonial_image"></div>
+            <h3 class="card-name-color">Davi Belo de Carvalho</h3>
+          </div>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam asperiores minus odio sunt tempora magni? Nemo tenetur natus praesentium laboriosam sed! Nam nemo quod reiciendis sed vero accusantium. Architecto, possimus.</p>
         </div>
       </div>
-      <button>Quero garantir meu acesso!</button>
     </div>
+
   </section>
   <section class="Section2 padding-section centralize">
     <div class="container">
       <h2 class="font-size-bigger font-bold">As 4 trilhas do VAP</h2>
       <div class="grid-informations">
         <div class="card">
-          <div class="card-blue"></div>
+          <div class="card-blue">
+            <img class="image_card-blue" src="./assets/Força emocional.png" alt="">
+          </div>
           <div class="card-gray">
             <p class="font-card-start">Lide com a ansiedade, os sentimentos ruins e as pressões internas e extemas.</p>
             <p class="font-bold align-end font-card-end">Força Emocional</p>
           </div>
         </div>
         <div class="card">
-          <div class="card-blue"></div>
+          <div class="card-blue">
+            <img class="image_card-blue" src="./assets/Amadurecimento e motivação.png" alt="">
+          </div>
           <div class="card-gray">
             <p class="font-card-start">Choques de realidade. Doses de ânimo. Tudo o que vooe precisa para virar gente e dar o máximo nos estudos.</p>
             <p class="font-bold align-end font-card-end">Amadurecimento e Motivação</p>
           </div>
         </div>
         <div class="card">
-          <div class="card-blue"></div>
+          <div class="card-blue">
+            <img class="image_card-blue" src="./assets/Neurociência da aprendizagem.png" alt="">
+          </div>
           <div class="card-gray">
             <p class="font-card-start">Estude conforme evidências científicas. Maximize seu aprendizado e alcance a aprovação.</p>
             <p class="font-bold align-end font-card-end">Neurociência da Aprendizagem</p>
           </div>
         </div>
         <div class="card">
-          <div class="card-blue"></div>
+          <div class="card-blue">
+            <img class="image_card-blue" src="./assets/Produtividade e gestão de tempo.png" alt="">
+          </div>
           <div class="card-gray">
             <p class="font-card-start">Domine seu tempo, pare de procrastinar e se torne produtivo de verdade.</p>
             <p class="font-bold align-end font-card-end">Gestão de Tempo</p>
           </div>
         </div>
       </div>
-      <button>Quero garantir meu acesso!</button>
+      <button class="button">Quero garantir meu acesso!</button>
       <div class="items-section">
         <div class="items-grid">
-          <img class="grid-photo" src="" alt="">
+          <img class="grid-photo-mockup" src="./assets/Mockup 1.png" alt="">
           <div class="items-text">
             <h3 class="font-large">O que você <span class="span-yellow">vai encontrar?</span></h3>
             <p class="padding-bottom" ><span class="bullet">•</span> Conteúdo em texto, rápido e prático.</p>
@@ -79,7 +108,7 @@
             <p class="padding-bottom" ><span class="bullet">•</span> Métodos de estudo baseados em neurociência.</p>
             <p class="padding-bottom" ><span class="bullet">•</span> Doses de ânimo e motivação.</p>
           </div>
-          <img class="grid-photo" src="" alt="">
+          <img class="grid-photo-mockup" src="./assets/Mockup 2.png" alt="">
           <div class="items-text">
             <h3 class="font-large">O que você <span class="span-red">não vai encontrar?</span></h3>
             <p class="padding-bottom" ><span class="bullet">•</span> Aulas chatas e cheias de enrolação.</p>
@@ -87,7 +116,7 @@
             <p class="padding-bottom" ><span class="bullet">•</span> Conteúdos desnecessários.</p>
             <p class="padding-bottom" ><span class="bullet">•</span> Templates que você nunca usa.</p>
           </div>
-          <img class="grid-photo" src="" alt="">
+          <img class="grid-photo-mockup" src="./assets/Mockup 3.png" alt="">
           <div class="items-text">
             <h3 class="font-large">Para quem <span class="span-yellow">é?</span></h3>
             <p class="padding-bottom" ><span class="bullet">•</span> Quem quer ser aprovado sem perder a cabeça.</p>
@@ -97,7 +126,7 @@
             <p class="padding-bottom" ><span class="bullet">•</span> Quem quer ser produtivo de verdade.</p>
             <p class="padding-bottom" ><span class="bullet">•</span> Quem quer se tornar uma pessoa melhor.</p>
           </div>
-          <img class="grid-photo" src="" alt="">
+          <img class="grid-photo-mockup" src="./assets/Mockup 4.png" alt="">
           <div class="items-text">
             <h3 class="font-large">Para quem <span class="span-red">não é?</span></h3>
             <p class="padding-bottom" ><span class="bullet">•</span> Quem acredita que "é só estudar que passa".</p>
@@ -107,7 +136,7 @@
           </div>
         </div>
         <div class="centralize">
-          <button>Quero garantir meu acesso!</button>
+          <button class="button">Quero garantir meu acesso!</button>
         </div>
       </div>
     </div>
@@ -118,7 +147,7 @@
       <h2 class="font-bold font-size-bigger-2">Aproveite o <span class="span-yellow">preço exclusivo</span> de lançamento</h2>
       <img class="price-image" src="./assets/Preço.png" alt="">
       <div>
-        <button>Quero garantir meu acesso!</button>
+        <button class="button">Quero garantir meu acesso!</button>
       </div>
       <p>Compre na oferta de lançamento e <span class="span-yellow">garanta todas as atualizações até o Enem.</span></p>
     </div>
@@ -185,10 +214,22 @@ header{
   padding: 10px 20px 10px 0;
 }
 
+.first-informations{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
 
+.first-informations_text{
+  text-align: left;
+}
+
+.second-informations_text{
+  text-align: right;
+}
 
 .container {
-  max-width: 800px;
+  max-width: 1200px;
   width: 100%;
 }
 
@@ -202,6 +243,11 @@ header{
 .Section1, .Section3{
   background-color: #101010;
   color: white;
+}
+
+.Section2-New{
+  background-color: #B53535;
+  color: #eee;
 }
 
 .price-image{
@@ -218,6 +264,12 @@ header{
 
 p, .align-end{
   margin: 0;
+}
+
+.font-card_first-informations_text{
+  font-weight: 400;
+  font-size: 17px;
+
 }
 
 .font-card-start{
@@ -250,6 +302,11 @@ button{
   width: 100%;
 }
 
+.grid-photo-mockup{
+  width: 80%;
+  margin: auto;
+}
+
 .grid-text{
   text-align: left;
 }
@@ -273,11 +330,12 @@ button{
 .items-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 3rem;
   padding: 2rem;
 }
 
 .items-text{
+  margin: auto;
   list-style-type: disc;
 }
 
@@ -288,9 +346,42 @@ button{
   gap: 3rem;
 }
 
+.card-testimonial_image{
+  background-color: gray;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.card-up-information{
+  display: flex;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.card-white{
+  text-align: left;
+  padding: 20px 15px;
+  background-color: white;
+  border-radius: 6px;
+  color: rgb(74, 67, 67);
+}
+
+.button{
+  cursor: pointer;
+}
+
+.card-name-color{
+  color: black;
+}
+
 .card {
   position: relative; 
   height: 200px; 
+}
+
+.image_card-blue{
+  width: 100%;
 }
 
 .card-blue {
