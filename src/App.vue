@@ -660,6 +660,10 @@ button{
   gap: 100px;
   }
 
+.grid-photo-mockup{
+  height: 80%;
+}
+
   .second-informations_text{
   text-align: center;
   padding-top: 30px;
