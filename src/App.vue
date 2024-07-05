@@ -415,6 +415,7 @@ button{
   border: none;
   font-weight: 500;
   font-size: large;
+  color: #101010 !important;
   background-color: #E5B30C;
   cursor: pointer;
   transition: background-color 0.3s ease;
