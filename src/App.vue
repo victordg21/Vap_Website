@@ -121,7 +121,7 @@
             <img class="image_card-blue" src="./assets/Amadurecimento e motivação.png" alt="">
           </div>
           <div class="card-gray">
-            <p class="font-card-start">Choques de realidade. Doses de ânimo. Tudo o que vooe precisa para virar gente e dar o máximo nos estudos.</p>
+            <p class="font-card-start">Choques de realidade. Doses de ânimo. Tudo o que você precisa para virar gente e dar o máximo nos estudos.</p>
             <p class="font-bold align-end font-card-end">Amadurecimento e Motivação</p>
           </div>
         </div>
@@ -149,17 +149,17 @@
         <div class="items-grid">
           <img class="grid-photo-mockup" src="./assets/Mockup 1.png" alt="">
           <div class="items-text">
-            <h3 class="font-large">O que você <span class="span-yellow">vai encontrar?</span></h3>
+            <h3 class="font-large font-bold">O que você <span class="font-bold span-yellow">vai encontrar?</span></h3>
             <p class="padding-bottom" ><span class="bullet">•</span> Conteúdo em texto, rápido e prático.</p>
             <p class="padding-bottom" ><span class="bullet">•</span> Organizado no Notion.</p>
             <p class="padding-bottom" ><span class="bullet">•</span> Técnicas de controle emocional.</p>
-            <p class="padding-bottom" ><span class="bullet">•</span> Técnicas de antiprocrastinação.</p>
+            <p class="padding-bottom" ><span class="bullet">•</span> Técnicas antiprocrastinação.</p>
             <p class="padding-bottom" ><span class="bullet">•</span> Métodos de estudo baseados em neurociência.</p>
             <p class="padding-bottom" ><span class="bullet">•</span> Doses de ânimo e motivação.</p>
           </div>
           <img class="grid-photo-mockup" src="./assets/Mockup 2.png" alt="">
           <div class="items-text">
-            <h3 class="font-large">O que você <span class="span-red">não vai encontrar?</span></h3>
+            <h3 class="font-large font-bold">O que você <span class="span-red font-bold">não vai encontrar?</span></h3>
             <p class="padding-bottom" ><span class="bullet">•</span> Aulas chatas e cheias de enrolação.</p>
             <p class="padding-bottom" ><span class="bullet">•</span> Mais um cronograma inútil.</p>
             <p class="padding-bottom" ><span class="bullet">•</span> Conteúdos desnecessários.</p>
@@ -167,7 +167,7 @@
           </div>
           <img class="grid-photo-mockup" src="./assets/Mockup 3.png" alt="">
           <div class="items-text">
-            <h3 class="font-large">Para quem <span class="span-yellow">é?</span></h3>
+            <h3 class="font-large font-bold">Para quem <span class="span-yellow font-bold">é?</span></h3>
             <p class="padding-bottom" ><span class="bullet">•</span> Quem quer ser aprovado sem perder a cabeça.</p>
             <p class="padding-bottom" ><span class="bullet">•</span> Quem quer dominar o medo e a ansiedade.</p>
             <p class="padding-bottom" ><span class="bullet">•</span> Quem quer ser constante.</p>
@@ -177,7 +177,7 @@
           </div>
           <img class="grid-photo-mockup" src="./assets/Mockup 4.png" alt="">
           <div class="items-text">
-            <h3 class="font-large">Para quem <span class="span-red">não é?</span></h3>
+            <h3 class="font-large font-bold">Para quem <span class="span-red font-bold">não é?</span></h3>
             <p class="padding-bottom" ><span class="bullet">•</span> Quem acredita que "é só estudar que passa".</p>
             <p class="padding-bottom" ><span class="bullet">•</span> Quem quer continuar estagnado.</p>
             <p class="padding-bottom" ><span class="bullet">•</span> Quem quer passar anos estudando sem resultado.</p>
@@ -245,6 +245,16 @@
       </div>
     </div>
   </section>
+  <footer class="centralize padding-global">
+    <div class="container">
+      <div class="flex centralize">
+        <img class="footer-image-1"src="./assets/safe-purchase-7779878_1280.webp" alt="">
+        <img class="footer-image-2"src="./assets/garantia-7-dias.png" alt="">
+      </div>
+      <h2 class="text-white">© Copyright by Davi Belo de Carvalho</h2>
+
+    </div>
+  </footer>
 </template>
 
 <style scoped>
@@ -252,6 +262,10 @@
 *{
   font-family: Helvetica, sans-serif;
   font-weight: 500;
+}
+
+.flex{
+  display: flex;
 }
 
 .font-bold{
@@ -262,6 +276,23 @@
   color: #E5B30C;
 }
 
+footer{
+  padding: 30px 0 10px;
+  font-size: 10px;
+}
+
+.footer-image-1{
+  width: 140px;
+  height: 60px;
+  padding: 0 20px
+}
+
+.footer-image-2{
+  width: 60px;
+  height: 60px;
+  padding: 0 20px
+}
+
 .span-red{
   color:#B53535;
 }
@@ -270,6 +301,10 @@
   width: 30px;
   padding-right: 20px;
   padding-bottom: 10px;
+}
+
+.text-white{
+  color: white;
 }
 
 .font-large{
@@ -304,7 +339,7 @@
   font-size: 24px;
 }
 
-header{
+header, footer{
   background-color: #B53535;
 }
 
@@ -345,7 +380,7 @@ header{
   text-align: center;
 }
 
-.Section1, .Section3{
+.Section1, .Section3, footer{
   background-color: #101010;
   color: white;
 }
