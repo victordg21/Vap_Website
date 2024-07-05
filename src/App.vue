@@ -1,5 +1,11 @@
 <script>
   export default {
+    data() {
+    return {
+      countdown: '',
+      interval: null,
+    }
+  },
   methods: {
     scrollToSection() {
       const section = document.getElementById('sales');
@@ -9,20 +15,49 @@
           behavior: 'smooth'
         });
       }
-    }
-  }
+    },
+    goToLink() {
+      window.location.href = 'https://pay.kiwify.com.br/VEpZ3T9';
+    },
+    updateCountdown() {
+      const now = new Date();
+      let nextSunday = new Date();
+      nextSunday.setDate(now.getDate() + (7 - now.getDay()) % 7);
+      nextSunday.setHours(0, 0, 0, 0);
+
+      const timeDifference = nextSunday - now;
+
+      if (timeDifference > 0) {
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+        
+        this.countdown = `${days.toString().padStart(2, '0')}:${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      } else {
+        this.countdown = '00:00:00:00';
+      }
+    },
+  },
+  mounted() {
+    this.updateCountdown();
+    this.interval = setInterval(this.updateCountdown, 1000); // Atualiza a cada segundo
+  },
+  beforeDestroy() {
+    clearInterval(this.interval);
+  },
   }
 </script>
 
 <template>
   <header class="centralize">
     <img class="header-image" src="./assets/clock.png" alt="">
-      <h1 class="text-header span-yellow">Essa oferta terminará em XX:XX:XX</h1>
+      <h1 class="text-header span-yellow">Essa oferta terminará em {{countdown}}</h1>
   </header>
   <section class="Section1 padding-section centralize">
     <div class="container">
       <h2 class="font-bold font-size-bigger">O que você precisa para <span class="span-yellow">superar a procrastinação, a ansiedade e a inconstância </span>nos estudos para o vestibular é <span class="span-yellow">dominar os 4 princípios da Alta Performance</span></h2>
-      <h3 class="span-yellow">TE CONVIDO A ASSISTIR O VÍDEO ABAIXO, ONDE EU VOU TE MOSTRAR O VERDADEIRO MAPA DA APROVAÇÃO E TUDO QUE É NECESSÁRIO PARA VOCÊ EXTRAIR O MÁXIMO DOS SEUS ESTUDOS.</h3>
+      <h3 class="span-yellow font-size-tablet">Te convido a assistir o vídeo abaixo, onde eu vou te mostrar o verdadeiro mapa da aprovação e tudo que é necessário para você extrair o máximo dos seus estudos.</h3>
       <div class="centralize">
         <iframe class="video-vap" src="https://www.youtube.com/embed/JxvDjBeZnZw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
@@ -32,37 +67,37 @@
   <section class="Section2-New padding-section centralize">
     <div class="container">
       <div class="first-informations">
-        <h2 class="first-informations_text font-card_first-informations_text">Se você acha que “só estudar é suficiente”... <span class="font-bold">Veja o resultado de quem decidiu dominar os princípios e aplicar o VAP na sua preparação</span>:</h2>
-        <p class="font-large second-informations_text"><span class="span-yellow font-size-bigger">+100 alunos</span> <br>Com o Método VAP</p>
+        <h2 class="first-informations_text font-card_first-informations_text">Se você acha que “só estudar é suficiente”... <span class="font-bold span-yellow">Veja o resultado de quem decidiu dominar os princípios e aplicar o VAP na sua preparação</span>:</h2>
+        <p class="font-large second-informations_text"><span class="span-yellow font-size-vest font-bold">+200 vestibulandos</span> <br>atendidos no último ano</p>
       </div>
       <div class="grid-testimonial">
         <div class="card-white">
           <div class="card-up-information">
-            <div class="card-testimonial_image"></div>
-            <h3 class="card-name-color">Davi Belo de Carvalho</h3>
+            <img class="card-testimonial_image" src="./assets/depoimento-1.jpeg" alt="">
+            <h3 class="card-name-color">Yasmin S. Cruz</h3>
           </div>
-          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam asperiores minus odio sunt tempora magni? Nemo tenetur natus praesentium laboriosam sed! Nam nemo quod reiciendis sed vero accusantium. Architecto, possimus.</p>
+          <p class="">Enquanto li os conteúdos, consegui ver muito da minha realidade nos anos de cursinho, a forma errada de lidar com algumas emoções e a falta de práticas que poderiam ter melhorado muito meu rendimento. Eu pude sentir de novo uma pontinha de esperança na minha aprovação.</p>
         </div>
         <div class="card-white">
           <div class="card-up-information">
-            <div class="card-testimonial_image"></div>
-            <h3 class="card-name-color">Davi Belo de Carvalho</h3>
+            <img class="card-testimonial_image" src="./assets/depoimento-2.jpeg" alt="">
+            <h3 class="card-name-color">M. Clara Campos</h3>
           </div>
-          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam asperiores minus odio sunt tempora magni? Nemo tenetur natus praesentium laboriosam sed! Nam nemo quod reiciendis sed vero accusantium. Architecto, possimus.</p>
+          <p class="">O VAP foi como um tapa na cara e um abraço ao mesmo tempo. Tenho certeza que aplicar todas as técnicas e os ensinamentos no meu dia a dia vai me dar não só qualidade nos estudos mas também na vida.</p>
         </div>
         <div class="card-white">
           <div class="card-up-information">
-            <div class="card-testimonial_image"></div>
-            <h3 class="card-name-color">Davi Belo de Carvalho</h3>
+            <img class="card-testimonial_image" src="./assets/depoimento-3.jpeg" alt="">
+            <h3 class="card-name-color">João Victor Novais</h3>
           </div>
-          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam asperiores minus odio sunt tempora magni? Nemo tenetur natus praesentium laboriosam sed! Nam nemo quod reiciendis sed vero accusantium. Architecto, possimus.</p>
+          <p class="">Se eu tivesse o VAP antes meu ano teria sido muito mais fácil. Os conteúdos me ajudaram a compreender melhor o momento que estou passando como vestibulando. É quase uma terapia em textos!</p>
         </div>
         <div class="card-white">
           <div class="card-up-information">
-            <div class="card-testimonial_image"></div>
-            <h3 class="card-name-color">Davi Belo de Carvalho</h3>
+            <img class="card-testimonial_image" src="./assets/depoimento-4.jpeg" alt="">
+            <h3 class="card-name-color">Marcela Toscano</h3>
           </div>
-          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam asperiores minus odio sunt tempora magni? Nemo tenetur natus praesentium laboriosam sed! Nam nemo quod reiciendis sed vero accusantium. Architecto, possimus.</p>
+          <p class="">Quando entrei no VAP senti que tinha “saído de uma caverna”. Impressionante como ninguém tinha me ensinado essas coisas antes. Hoje posso dizer que estou mais segura e confiante com minha preparação.</p>
         </div>
       </div>
     </div>
@@ -160,25 +195,25 @@
       <h2 class="font-size-bigger">Se você está em ano de vestibular, sentindo-se  <span class="span-yellow">inseguro, estagnado e improdutivo</span> ou enfrenta problemas com <span class="span-yellow"a>ansiedade e desânimo…</span></h2>
       <p class="font-size-medium">Eu vou te entregar um ambiente de desenvolvimento para fazer seu estudo render de verdade. <span class="span-yellow">Basta você pôr em prática para:</span></p>
       <div class="points-arrow top">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#E5B30C" class="bi bi-arrow-right" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" fill="#E5B30C" class="bi bi-arrow-right" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
         </svg>
         <p class="points-arrow_text">Vencer a procrastinação, gerenciar o próprio tempo e conseguir estudar com constância e equilíbrio;</p>
       </div>
       <div class="points-arrow">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#E5B30C" class="bi bi-arrow-right" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" fill="#E5B30C" class="bi bi-arrow-right" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
         </svg>
         <p class="points-arrow_text">Melhorar drasticamente seu rendimento nos estudos, por meio de métodos e técnicas neurocientíficas;</p>
       </div>
       <div class="points-arrow">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#E5B30C" class="bi bi-arrow-right" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" fill="#E5B30C" class="bi bi-arrow-right" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
         </svg>
         <p class="points-arrow_text">Superar a ansiedade e a insegurança e alcançar seu ápice de produtividade, usando as emoções ao seu favor.</p>
       </div>
       <div class="points-arrow">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#E5B30C" class="bi bi-arrow-right" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" fill="#E5B30C" class="bi bi-arrow-right" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
         </svg>
         <p class="points-arrow_text">Retomar a sua confiança na aprovação e estudar com ânimo e motivação.</p>
@@ -193,7 +228,7 @@
       <h2 class="font-bold font-size-bigger-2">Aproveite o <span class="span-yellow">preço exclusivo</span> de lançamento</h2>
       <img class="price-image" src="./assets/Preço.png" alt="">
       <div>
-        <button class="button">Quero garantir meu acesso!</button>
+        <button @click="goToLink" class="button">Quero garantir meu acesso!</button>
       </div>
       <p>Compre na oferta de lançamento e <span class="span-yellow">garanta todas as atualizações até o Enem.</span></p>
     </div>
@@ -202,11 +237,11 @@
     <div class="display-grid-photo container">
       <img class="grid-photo" src="./assets/Foto1.png" alt="">
       <div class="grid-text">
-        <h2 class="h2-title font-size-bigger">Quem sou eu?</h2>
-        <p>Davi Belo de Carvalho</p><br>
-        <p>Terapeuta no maior cursinho pré-vestibular do seu estado.</p><br>
-        <p>Davi Belo já atendeu mais de 200 vestibulando e gerenciou intervenções em grupo, palestras e momentos de espiritualidade com uma série de estudantes.</p><br>
-        <p>Depois de ter escutado e ajudado muitos alunos e pacientes vestibulandos, decidiu condensar as principais necessidades e problemas que percebeu e solucionou no VAP.</p>
+        <h2 class="h2-title font-bold font-size-bigger">Quem sou eu?</h2>
+        <p class="font-size-medium">Davi Belo de Carvalho</p><br><br>
+        <p class="font-size-medium">Terapeuta no maior cursinho pré-vestibular do seu estado.</p><br><br>
+        <p class="font-size-medium">Davi Belo já atendeu mais de 200 vestibulando e gerenciou intervenções em grupo, palestras e momentos de espiritualidade com uma série de estudantes.</p><br><br>
+        <p class="font-size-medium">Depois de ter escutado e ajudado muitos alunos e pacientes vestibulandos, decidiu condensar as principais necessidades e problemas que percebeu e solucionou no VAP.</p>
       </div>
     </div>
   </section>
@@ -217,6 +252,10 @@
 *{
   font-family: Helvetica, sans-serif;
   font-weight: 500;
+}
+
+.font-bold{
+  font-weight: bold;
 }
 
 .span-yellow{
@@ -243,8 +282,22 @@
   font-size: 44px;
 }
 
+.font-size-vest{
+  font-size: 44px;
+}
+
 .font-size-bigger-2{
   font-size: 50px;
+}
+
+.bi-arrow-right{
+  height: 20px;
+  width: 20px;
+}
+
+.bi-arrow-right{
+  width: 20px;
+  height: 20px
 }
 
 .font-size-medium{
@@ -268,6 +321,7 @@ header{
 
 .first-informations_text{
   text-align: left;
+  margin: auto;
 }
 
 .second-informations_text{
@@ -291,9 +345,14 @@ header{
   text-align: center;
 }
 
-.Section1, .Section3, .Section4-New{
+.Section1, .Section3{
   background-color: #101010;
   color: white;
+}
+
+.Section4-New{
+  background-color: #fff;
+  color: black
 }
 
 .Section2-New{
@@ -423,8 +482,7 @@ button{
 .card-testimonial_image{
   background-color: gray;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 12%
 }
 
 .card-up-information{
@@ -450,18 +508,21 @@ button{
   height: 200px; 
 }
 
-.image_card-blue{
+.image_card-blue, .image-card-testimonial{
   width: 100%;
 }
 
 .card-blue {
   position: absolute;
-  background-color: blue;
   width: 33.3%;
   height: 100%;
   border-radius: 20px;
   left: 0;
   top: 0;
+}
+
+.font-size-tablet{
+  text-transform: uppercase;
 }
 
 .card-gray {
@@ -480,16 +541,52 @@ button{
   justify-content: space-between;
 }
 
+@media (max-width: 655px) and (min-width: 435px){
+  .grid-informations{
+    padding-bottom: 100px;
+  }
+
+  .card{
+    padding-bottom: 120px;
+  }
+}
+
 @media (max-width: 1080px) and (min-width: 656px){
 
   .container{
     width: 90%;
   }
+  .first-informations{
+  display: block;
+  gap: 100px;
+  }
+  .second-informations_text{
+  text-align: center;
+  padding-top: 30px;
+}
+
+
+
+.card-white{
+  margin-bottom: 30px;
+}
+
+.grid-testimonial{
+    display: block;
+  }
 
   .video-vap{
-    width: 700px;
-    height: 400px;
+    width: 600px;
+    height: 350px;
   }
+
+  .font-size-bigger{
+    font-size: 30px;
+  }
+
+  .font-size-tablet{
+  text-transform:none;
+}
 }
 
 @media (max-width: 655px){
@@ -498,7 +595,7 @@ button{
     width: 90%;
   }
 
-  .grid-informations{
+  .grid-informations, .grid-testimonial{
     display: block;
   }
 
@@ -506,11 +603,51 @@ button{
     margin-bottom: 20px;
   }
 
+  .font-size-tablet{
+  text-transform: none;
+}
+
+
+.card-testimonial_image{
+  background-color: gray;
+  border-radius: 50%;
+  width: 20%
+}
+
+.first-informations{
+  display: block;
+  gap: 100px;
+  }
+
+  .second-informations_text{
+  text-align: center;
+  padding-top: 30px;
+}
+
+.video-vap{
+    width: 300px;
+    height: 180px;
+  }
+
+  .font-size-bigger{
+    font-size: 20px;
+  }
+
+  .font-size-tablet{
+  text-transform:none;
+  font-size: 15px;
+  padding: 20px 0;
+}
+
   
 .images-section-1{
   width: 25px;
   padding-right: 5px;
   padding-bottom: 10px;
+}
+
+.card-white{
+  margin-bottom: 30px;
 }
 
 .text-first-section{
@@ -538,6 +675,20 @@ header{
   width: 70%;
   margin: 0 auto;
   padding-top: 20px;
+}
+
+.bi-arrow-right{
+  width: 40px;
+  margin: auto;
+}
+
+
+.items-grid{
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 2rem;
 }
 
 
