@@ -52,7 +52,7 @@
 <template>
   <header class="centralize">
     <img class="header-image" src="./assets/clock.png" alt="">
-      <h1 class="text-header span-yellow">Essa oferta terminará em {{countdown}}</h1>
+    <h1 class="text-header span-yellow">Essa oferta terminará em {{countdown}}</h1>
   </header>
   <section class="Section1 padding-section centralize">
     <div class="container">
@@ -303,6 +303,10 @@ footer{
   padding-bottom: 10px;
 }
 
+.text-header{
+  margin: 2px;
+}
+
 .text-white{
   color: white;
 }
@@ -339,8 +343,9 @@ footer{
   font-size: 24px;
 }
 
-header, footer{
+header{
   background-color: #B53535;
+  
 }
 
 .header-image{
