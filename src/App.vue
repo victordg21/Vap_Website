@@ -105,7 +105,7 @@
   </section>
   <section class="Section2 padding-section centralize">
     <div class="container">
-      <h2 class="font-size-bigger font-bold">As 4 trilhas do VAP</h2>
+      <h2 class="font-size-bigger-3 font-bold">As 4 trilhas do VAP</h2>
       <div class="grid-informations">
         <div class="card">
           <div class="card-blue">
@@ -318,6 +318,10 @@ footer{
 }
 
 .font-size-bigger{
+  font-size: 44px;
+}
+
+.font-size-bigger-3{
   font-size: 44px;
 }
 
@@ -662,6 +666,10 @@ button{
 
 .grid-photo-mockup{
   height: 80%;
+}
+
+.font-size-bigger-3{
+  font-size: 36px;
 }
 
   .second-informations_text{
